@@ -1,0 +1,4 @@
+image_server_url: http://ec2-54-87-105-43.compute-1.amazonaws.com
+store_db: spree_development
+store_username: root
+store_host: localhost

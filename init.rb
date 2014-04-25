@@ -1,0 +1,6 @@
+require 'mysql2'
+require 'active_record'
+require 'yaml'
+require_relative 'config/settings'
+require_relative 'models/init'
+require_relative 'benchmarking/init'
