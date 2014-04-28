@@ -17,7 +17,7 @@ class WrapAllDevices
     CSV.open(File.join(csv_path, 'server_wrap_times.csv'), 'wb') do |csv|
       csv << ['Device id','Device name','Time elapsed','Artwork', 'Http response']
       times.each do |row|
-        csv << %W(#{row.first.id} #{row.first.name} #{row[1]} #{row[2].name}, #{row.last.code})
+        csv << %W(#{row.first.device_id} #{row.first.name} #{row[1]} #{row[2].name}, #{row.last.code})
       end
     end
   end
