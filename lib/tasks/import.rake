@@ -6,9 +6,14 @@ task :import do
 
 
   devices = client.query(<<-SQL)
-    SELECT id, presentation AS name
-    FROM spree_option_values
-    WHERE production_name IS NOT NULL
+     SELECT id, presentation AS name
+      FROM spree_option_values
+      WHERE production_name IS NOT NULL
+      AND deleted_at IS NULL
+      AND parent_id = 0
+      AND id <> 131
+      AND is_archived = 0
+      AND is_virtual = 0
   SQL
 
   works = client.query(<<-SQL)
