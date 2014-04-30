@@ -23,7 +23,7 @@ class WrapAllDevices
   end
 
   def for_artwork(device, artwork, size)
-    uri = URI("#{Settings.image_server_url}/public_wraps/iphone/#{artwork.artist_name}/#{artwork.artwork_id}/#{device.device_id}/#{size}/benchmark.jpg")
+    uri = URI(URI.escape("#{Settings.image_server_url}/public_wraps/iphone/#{artwork.artist_name}/#{artwork.artwork_id}/#{device.device_id}/#{size}/benchmark.jpg"))
     Net::HTTP.get_response uri
   end
 
