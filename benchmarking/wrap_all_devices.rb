@@ -33,7 +33,7 @@ class WrapAllDevices
 
   def artwork(id)
     if id
-      Artwork.find id
+      Artwork.find_by_artwork_id id
     else
       Artwork.find_by_name 'tokidoki All Stars'
     end
