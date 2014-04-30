@@ -30,6 +30,7 @@ task :import do
   Rake::Task['ar:connect'].invoke
   Device.delete_all
   Artwork.delete_all
+  ActiveRecord::Base.connection.execute "delete from sqlite_sequence where name in ('devices', 'artworks')"
 
   devices.each do |device|
     Device.create!(name: device['name'], device_id: device['id'])
