@@ -1,4 +1,4 @@
-image_server_url: http://ec2-54-87-105-43.compute-1.amazonaws.com
+image_server_url: http://qa-images-1169488481.us-east-1.elb.amazonaws.com
 store_db: spree_development
 store_username: root
 store_host: localhost
